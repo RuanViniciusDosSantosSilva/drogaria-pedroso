@@ -1,0 +1,153 @@
+/* ==========================================================================
+   DROGARIA PEDROSO — responsive.css
+   Ajustes progressivos (min-width) sobre o layout mobile de style.css.
+   Pontos de quebra:
+     520px  celulares grandes
+     640px  tablet retrato
+     900px  tablet paisagem / notebook pequeno
+     1080px desktop (navbar horizontal e layouts em 2 colunas)
+   ========================================================================== */
+
+/* ---------- >= 520px ---------- */
+@media (min-width: 520px) {
+  .btn-row { flex-direction: row; flex-wrap: wrap; }
+  .cta__actions { flex-direction: row; flex-wrap: wrap; width: auto; }
+  .trust { gap: 1rem; }
+  .trust__item { font-size: .875rem; }
+}
+
+/* ---------- >= 640px ---------- */
+@media (min-width: 640px) {
+  :root { --header-h: 76px; }
+  .brand img { height: 46px; }
+
+  .cards--products { grid-template-columns: repeat(4, 1fr); }
+  .cards--services { grid-template-columns: repeat(3, 1fr); }
+
+  .story__stats { grid-template-columns: repeat(3, 1fr); }
+
+  .delivery { grid-template-columns: auto 1fr; align-items: center; gap: 2rem; padding: 2rem; }
+  .delivery__areas { grid-column: 1 / -1; }
+  .places { grid-template-columns: repeat(4, auto); justify-content: start; gap: .6rem 1.75rem; }
+
+  .pillars { grid-template-columns: repeat(2, 1fr); }
+
+  /* Galeria: deixa de ser rolagem horizontal e vira grade */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-inline: 0;
+    padding: 0;
+    overflow: visible;
+  }
+  .gallery__item { flex: none; }
+
+  .review { flex-basis: 56%; }
+  .faq-cols { grid-template-columns: repeat(2, 1fr); align-items: start; }
+
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+  .footer__brand { grid-column: 1 / -1; }
+
+  .cta__inner { grid-template-columns: auto 1fr; align-items: center; column-gap: 1.5rem; }
+  .cta__actions { grid-column: 1 / -1; }
+}
+
+/* ---------- >= 900px ---------- */
+@media (min-width: 900px) {
+  .hero__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 3rem; }
+  .hero { padding-top: calc(var(--header-h) + 3rem); }
+  .trust { gap: 1.25rem; }
+
+  .story { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); align-items: center; gap: 3rem; }
+  .story__media { width: 100%; max-width: 400px; }
+  .story__stats { grid-column: 1 / -1; }
+
+  .delivery { grid-template-columns: auto 1fr; }
+
+  .gallery { grid-template-columns: repeat(4, 1fr); }
+
+  .review { flex-basis: calc(50% - .5rem); }
+  .carousel__track { margin-inline: 0; padding-inline: .25rem; scroll-padding-inline: .25rem; }
+
+  .location { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .map { aspect-ratio: 5 / 4; }
+
+  .footer__grid { grid-template-columns: 1.2fr .9fr 1.3fr 1.3fr; gap: 2.5rem; }
+  .footer__brand { grid-column: auto; }
+
+  .cta__inner { grid-template-columns: auto 1fr auto; column-gap: 2rem; }
+  .cta__actions { grid-column: auto; }
+}
+
+/* ---------- >= 1080px (desktop) ---------- */
+@media (min-width: 1080px) {
+  /* Navbar horizontal */
+  .nav-toggle { display: none; }
+  .nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .nav__list { display: flex; align-items: center; gap: 1.5rem; }
+  .nav__link {
+    position: relative;
+    padding: .5rem 0;
+    font-size: .9rem;
+    border-bottom: 0;
+  }
+  .nav__link::after {            /* sublinhado verde no item ativo / hover */
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--green);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+  }
+  .nav__link:hover::after,
+  .nav__link[aria-current="true"]::after { transform: scaleX(1); }
+  .nav__cta { width: auto; margin-top: 0; white-space: nowrap; }
+
+  /* Seções em duas colunas: título à esquerda, conteúdo à direita */
+  .split { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 3.5rem; align-items: center; }
+
+  .story { grid-template-columns: minmax(0, 3.4fr) minmax(0, 5fr) minmax(0, 3.2fr); gap: 3rem; }
+  .story__stats {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    padding: 0 0 0 2.5rem;
+    border-top: 0;
+    border-left: 1px solid var(--line);
+  }
+
+  .trust__item { flex-direction: row; text-align: left; gap: .65rem; }
+  .trust { grid-template-columns: repeat(3, auto); justify-content: start; }
+
+  .delivery { grid-template-columns: auto 1fr auto; gap: 2.5rem; padding: 2.5rem 3rem; }
+  .delivery__areas { grid-column: auto; }
+  .places { grid-template-columns: 1fr; }
+
+  .pillars { gap: 1rem; }
+
+  .wa-float { width: auto; padding: 0 1.4rem 0 1.15rem; }
+  .wa-float__label { display: inline; }
+
+  .footer__bottom { padding-bottom: 1.5rem; }
+}
+
+/* ---------- >= 1280px ---------- */
+@media (min-width: 1280px) {
+  .container { width: min(100% - 4rem, 1180px); }
+}

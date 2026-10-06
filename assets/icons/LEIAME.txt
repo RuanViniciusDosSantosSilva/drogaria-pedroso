@@ -1,0 +1,4 @@
+Os ícones da página estão em um sprite SVG embutido no index.html (bloco <svg> logo após <body>),
+para funcionar mesmo abrindo o arquivo direto no navegador.
+Para adicionar um ícone novo, crie um <symbol id="i-nome" viewBox="0 0 24 24"> nesse bloco
+e use: <svg class="icon" aria-hidden="true"><use href="#i-nome"/></svg>

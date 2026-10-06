@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Drogaria Pedroso">
+  <!-- IMAGEM DE COMPARTILHAMENTO (Open Graph, 1200x630). Troque por um .jpg/.png final com a fachada ou a logo. -->
+  <rect width="1200" height="630" fill="#F3F8F5"/>
+  <rect x="0" y="560" width="1200" height="70" fill="#12A05B"/>
+  <path d="M520 90h60a14 14 0 0 1 14 14v52h52a14 14 0 0 1 14 14v60a14 14 0 0 1-14 14h-52v52a14 14 0 0 1-14 14h-60a14 14 0 0 1-14-14v-52h-52a14 14 0 0 1-14-14v-60a14 14 0 0 1 14-14h52v-52a14 14 0 0 1 14-14Z" fill="#12A05B"/>
+  <text x="600" y="400" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#D61F69">Drogaria</text>
+  <text x="600" y="470" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800" fill="#08362A">Pedroso</text>
+  <text x="600" y="525" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#2F5B4B">Cuidado de verdade, perto de você · Itapeva/SP</text>
+</svg>

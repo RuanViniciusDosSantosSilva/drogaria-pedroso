@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" role="img" aria-label="Espaço reservado para a foto de Rodrigo Pedroso">
+  <!-- PLACEHOLDER RODRIGO (proporção 5:6). Substitua por foto real com a mesma proporção, ex.: assets/images/rodrigo-pedroso.jpg -->
+  <rect width="600" height="720" fill="#DCE9E2"/>
+  <circle cx="300" cy="280" r="90" fill="#A8C2B6"/>
+  <path d="M110 560c0-110 80-170 190-170s190 60 190 170Z" fill="#A8C2B6"/>
+  <text x="300" y="640" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#5F8173">[ FOTO DO RODRIGO ]</text>
+</svg>
